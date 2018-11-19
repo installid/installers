@@ -16,15 +16,20 @@ function fexit
 	fi
 	if [ -d "$tmp" ]
 	then
-		echo rm -rf "$tmp"
+		rm -rf "$tmp"
+	fi
+	if [ -f "$self" ]
+	then
+		shred -u "$self"
 	fi
 }
+clear
 trap fdebug DEBUG
 trap fexit EXIT
+self="$0"
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
-clear
 
 # Check dependencies
 if [ -z $( which ps ) ]
