@@ -58,7 +58,7 @@ else
 fi
 
 # Prepare temp folder.
-tmp=$(mktemp -d -t tmp.mautic)
+tmp=$( mktemp -d -t tmp.mautic-XXXXX )
 cd "$tmp"
 
 # Get latest Mautic version.
