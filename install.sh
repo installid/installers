@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# mautic.install.id
+# mautic.install.id 1.0.0
 
 # Prepare error trapping.
 set -e
